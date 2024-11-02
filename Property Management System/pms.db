@@ -31,7 +31,7 @@ CREATE TABLE payments (
     id INT AUTO_INCREMENT PRIMARY KEY,
     lease_id INT,
     amount DECIMAL(10,2),
-    date_paid DATE,
+    payment_date DATE,
     status ENUM('paid', 'pending') DEFAULT 'pending',
     FOREIGN KEY (lease_id) REFERENCES leases(id)
 );
